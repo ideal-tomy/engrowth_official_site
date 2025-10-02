@@ -32,7 +32,7 @@ export const PricingCard: React.FC<PricingCardProps> = ({
   originalPrice,
   currentPrice,
   monthlyPrice,
-  discount,
+  // discount,
   isPopular = false,
   features,
   buttonText,
@@ -85,7 +85,7 @@ export const PricingCard: React.FC<PricingCardProps> = ({
         </div>
 
         {/* 説明文 */}
-        <div className="text-gray-600 text-sm mb-6 leading-relaxed">
+        <div className="text-gray-600 text-sm card-description">
           {features[0]}
         </div>
 

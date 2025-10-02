@@ -3,9 +3,13 @@ import Card from '@/components/ui/Card';
 import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
-import { PricingSection } from '@/components/sections/PricingSection';
+import SectionHeaderLeft from '@/components/ui/SectionHeaderLeft';
+import FullBleed1440 from '@/components/layout/FullBleed1440';
+import { CourseCards } from '@/components/sections/CourseCards';
 import Image from 'next/image';
 import Link from 'next/link';
+import React from 'react';
+import Hero from '@/components/sections/Hero';
 
 export const metadata = {
   title: 'コース・料金 - 目的に合わせて選べるコース・サービス | Engrowth',
@@ -17,134 +21,194 @@ export default function CoursesPage() {
   return (
     <div className="min-h-screen">
       {/* 1. ページヘッダー */}
-      <Section background="warm-white" padding="lg">
-        <Container>
-          <div className="text-center">
-            <Typography variant="heading-lg" className="text-dark-gray mb-4" as="h1">
-              コース・料金
-            </Typography>
-          </div>
-        </Container>
-      </Section>
-
-      {/* 2. コース選択（4カード） */}
-      <Section background="light-gray" padding="xl">
-        <Container>
-          <div className="text-center mb-12">
-            <Typography variant="heading-lg" className="text-dark-gray mb-4" as="h2">
-              目的に合わせて選べるコース・サービス
-            </Typography>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
-            {/* ビジネスコース */}
-            <Link href="/courses/business">
-              <Card className="hover:shadow-xl transition-all duration-300 cursor-pointer h-full">
-                <div className="relative">
-                  <Image
-                    src="/images/drive-download-20250908T014101Z-1-001/top/service-consultant.jpg"
-                    alt="ビジネスコース"
-                    width={400}
-                    height={200}
-                    className="w-full h-48 object-cover rounded-t-lg"
-                  />
-                  <div className="absolute top-4 left-4 bg-brand-red text-white px-3 py-1 rounded-full text-sm font-bold">
-                    ビジネスコース
-                  </div>
-                </div>
-              </Card>
-            </Link>
-
-            {/* ビジネススポットサービス */}
-            <Link href="/courses/business-spot">
-              <Card className="hover:shadow-xl transition-all duration-300 cursor-pointer h-full">
-                <div className="relative">
-                  <Image
-                    src="/images/drive-download-20250908T014101Z-1-001/spot-business/spot-business-interpretation.jpg"
-                    alt="ビジネススポットサービス"
-                    width={400}
-                    height={200}
-                    className="w-full h-48 object-cover rounded-t-lg"
-                  />
-                  <div className="absolute top-4 left-4 bg-brand-red text-white px-3 py-1 rounded-full text-sm font-bold">
-                    ビジネススポットサービス
-                  </div>
-                </div>
-              </Card>
-            </Link>
-
-            {/* 学生コース */}
-            <Link href="/courses/study">
-              <Card className="hover:shadow-xl transition-all duration-300 cursor-pointer h-full">
-                <div className="relative">
-                  <Image
-                    src="/images/drive-download-20250908T014101Z-1-001/students/students-class-understanding.jpg"
-                    alt="学生コース"
-                    width={400}
-                    height={200}
-                    className="w-full h-48 object-cover rounded-t-lg"
-                  />
-                  <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-bold">
-                    学生コース
-                  </div>
-                </div>
-              </Card>
-            </Link>
-
-            {/* 学生スポットサービス */}
-            <Link href="/courses/study-spot">
-              <Card className="hover:shadow-xl transition-all duration-300 cursor-pointer h-full">
-                <div className="relative">
-                  <Image
-                    src="/images/drive-download-20250908T014101Z-1-001/students/stu08.png"
-                    alt="学生スポットサービス"
-                    width={400}
-                    height={200}
-                    className="w-full h-48 object-cover rounded-t-lg"
-                  />
-                  <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-bold">
-                    学生スポットサービス
-                  </div>
-                </div>
-              </Card>
-            </Link>
-          </div>
-
-          {/* 無料カウンセリングバナー */}
-          <div className="relative mb-16">
-            <div className="max-w-4xl mx-auto">
-              <Image
-                src="/images/main_banner.png"
-                alt="30分の無料カウンセリングでご相談ください"
-                width={1200}
-                height={400}
-                className="w-full h-auto rounded-2xl shadow-lg"
-              />
-            </div>
-          </div>
-        </Container>
-      </Section>
-
-      {/* 3. 料金表 */}
-      <PricingSection 
-        title="あなたの目標とペースに合わせて選べる、柔軟なプランをご用意しました。"
-        description="入会金0円で始められます。長期プランほどお得になっており、継続的な学習をサポートします。"
-        background="warm-white"
+      <Hero
+        title=""
+        bgDesktopSrc="/images/courses/courses_hero.png"
+        bgMobileSrc="/images/hero_sma/courses_hero_sma.png"
+        bgPosition="center 30%"
+        className="flex items-center justify-center text-center"
       />
 
-      {/* 4. スポットサービス */}
-      <Section background="light-gray" padding="xl">
+      {/* 2. コース選択（4カード） */}
+      <Section background="light-gray" className="py-12 sm:py-16 lg:py-24 overflow-visible">
+        <SectionHeaderLeft
+          label="Courses & Services"
+          title="目的に合わせて選べるコース・サービス"
+          desc="ビジネス英語から留学準備、スポット利用まで。あなたのライフスタイルと目標に最適なプランをお選びいただけます。"
+          className="mb-12 lg:mb-16"
+        />
+        
+        <FullBleed1440>
+          <CourseCards />
+
+          {/* 無料カウンセリングバナー */}
+          <div className="relative mb-16 pt-10">
+            <div className="max-w-4xl mx-auto">
+              <Link href="/contact">
+                <Image
+                  src="/images/main_banner.png"
+                  alt="30分の無料カウンセリングでご相談ください"
+                  width={1200}
+                  height={400}
+                  className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
+                />
+              </Link>
+            </div>
+          </div>
+        </FullBleed1440>
+      </Section>
+
+      <Section background="white" className="py-6 sm:py-8 lg:py-12">
+  <Container>
+    <div className="text-center">
+    <h2 style={{ fontSize: '60px', fontFamily: '"游明朝", "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "MS PMincho", "MS 明朝", serif' }}>
+  Engrowthなら入会金無料
+</h2>
+    </div>
+  </Container>
+</Section>
+
+      {/* 4. 料金表 */}
+      <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
+        <SectionHeaderLeft
+          label="Pricing"
+          title="あなたの目標とペースに合わせて選べる料金プラン"
+          desc="Engrowthなら入会金0円。長期プランほどお得に、継続的な学習をサポートします。"
+          className="mb-12 lg:mb-16"
+        />
+        
         <Container>
-          <div className="text-center mb-16">
-            <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
-              スポットサービス
-            </Typography>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 max-w-[1440px] mx-auto">
+            {/* 1ヶ月プラン */}
+            <div className="flex justify-center">
+              <Card className="p-6 text-center border-2 border-gray-200 hover:border-brand-red transition-all duration-300 w-full max-w-sm h-full flex flex-col">
+                <Typography variant="heading-sm" className="text-dark-gray mb-2">
+                  1ヶ月
+                </Typography>
+                <Typography variant="heading-lg" className="text-brand-red mb-4">
+                  $1,780
+                </Typography>
+                <Typography variant="body-sm" className="text-gray mb-2">
+                  1ヶ月あたり $1,780
+                </Typography>
+                <div className="h-6 mb-4">
+                  {/* 空のスペース（割引表示なし） */}
+                </div>
+                <Typography variant="body-sm" className="text-gray mb-6 flex-grow">
+                  基本プラン
+                  <br />
+                  ※継続の方のみ1ヶ月単位でのお申し込み可
+                </Typography>
+              </Card>
+            </div>
+
+            {/* 3ヶ月プラン */}
+            <div className="flex justify-center">
+              <Card className="p-6 text-center border-2 border-gray-200 hover:border-brand-red transition-all duration-300 w-full max-w-sm h-full flex flex-col">
+                <Typography variant="heading-sm" className="text-dark-gray mb-2">
+                  3ヶ月
+                </Typography>
+                <Typography variant="heading-lg" className="text-brand-red mb-4">
+                  $4,490
+                </Typography>
+                <Typography variant="body-sm" className="text-gray mb-2">
+                  1ヶ月あたり $1,493
+                </Typography>
+                <div className="h-6 mb-4">
+                  {/* 空のスペース（割引表示なし） */}
+                </div>
+                <Typography variant="body-sm" className="text-gray mb-6 flex-grow">
+                  3ヶ月集中プラン
+                </Typography>
+                <Button variant="primary" size="sm" className="w-full mt-auto">
+                  このプランを選ぶ
+                </Button>
+              </Card>
+            </div>
+
+            {/* 6ヶ月プラン（人気） */}
+            <div className="flex justify-center">
+              <Card className="p-6 text-center border-2 border-brand-red bg-red-50 transition-all duration-300 w-full max-w-sm h-full flex flex-col relative">
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-brand-red text-white px-4 py-1 rounded-full text-sm font-bold">
+                    人気
+                  </span>
+                </div>
+                <Typography variant="heading-sm" className="text-dark-gray mb-2 mt-2">
+                  6ヶ月
+                </Typography>
+                <Typography variant="heading-lg" className="text-brand-red mb-4">
+                  $7,490
+                </Typography>
+                <Typography variant="body-sm" className="text-gray mb-2">
+                  1ヶ月あたり $1,246
+                </Typography>
+                <Typography variant="body-xs" className="text-action-green mb-4 h-6">
+                  約16%OFF
+                </Typography>
+                <Typography variant="body-sm" className="text-gray mb-6 flex-grow">
+                  6ヶ月継続プラン
+                </Typography>
+                <Button variant="primary" size="sm" className="w-full mt-auto">
+                  このプランを選ぶ
+                </Button>
+              </Card>
+            </div>
+
+            {/* 12ヶ月プラン */}
+            <div className="flex justify-center">
+              <Card className="p-6 text-center border-2 border-gray-200 hover:border-brand-red transition-all duration-300 w-full max-w-sm h-full flex flex-col">
+                <Typography variant="heading-sm" className="text-dark-gray mb-2">
+                  12ヶ月
+                </Typography>
+                <Typography variant="heading-lg" className="text-brand-red mb-4">
+                  $13,980
+                </Typography>
+                <Typography variant="body-sm" className="text-gray mb-2">
+                  1ヶ月あたり $1,165
+                </Typography>
+                <Typography variant="body-xs" className="text-action-green mb-4 h-6">
+                  約21%OFF
+                </Typography>
+                <Typography variant="body-sm" className="text-gray mb-6 flex-grow">
+                  12ヶ月完全サポートプラン
+                </Typography>
+                <Button variant="primary" size="sm" className="w-full mt-auto">
+                  このプランを選ぶ
+                </Button>
+              </Card>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
+          {/* 注記 */}
+          <div className="text-center mt-12">
+            <Typography variant="body-sm" className="text-gray-500 max-w-2xl mx-auto">
+              ※ 価格は税込み表示です。
+              <br />
+              ※ 長期プランほどお得になっており、継続的な学習をサポートします。
+              <br />
+              ※ 弊社では想定為替レート（3ヶ月ごとの平均値をとった額）を元に円での額を算出してます。
+            </Typography>
+          </div>
+        </Container>
+      </Section>
+
+      {/* 5. スポットサービス */}
+      <Section background="light-gray" className="py-12 sm:py-16 lg:py-24">
+        <SectionHeaderLeft
+          label="Spot Services"
+          title="必要な時に、必要な分だけ利用できるスポットサービス"
+          desc="定期コースに加えて、特定のニーズに対応したスポット利用も可能です。面接対策やプレゼン準備など、ピンポイントでサポートします。"
+          className="mb-12 lg:mb-16"
+        />
+        
+        <Container>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full mb-16">
             {/* ビジネススポットサービス */}
             <Card className="p-6 text-center">
               <Image
-                src="/images/drive-download-20250908T014101Z-1-001/spot-business/spot-business-observer.jpg"
+                src="/images/spot-business/spot-business-observer.jpg"
                 alt="ビジネススポットサービス"
                 width={300}
                 height={200}
@@ -154,9 +218,11 @@ export default function CoursesPage() {
                 ビジネススポットサービス
               </Typography>
               <Typography variant="body-sm" className="text-gray mb-4">
-                会議同席通訳（オンライン）、xxなど
+                会議同席通訳（オンライン）
                 <br />
-                ¥xx,xxx
+                資料作成・翻訳サポート
+                <br />
+                プレゼンテーション準備
               </Typography>
               <Link href="/courses/business-spot">
                 <Button variant="secondary" size="sm" className="w-full">
@@ -168,7 +234,7 @@ export default function CoursesPage() {
             {/* 学生スポットサービス */}
             <Card className="p-6 text-center">
               <Image
-                src="/images/drive-download-20250908T014101Z-1-001/students/essay-correction-before.jpg"
+                src="/images/students/essay-correction-before.jpg"
                 alt="学生スポットサービス"
                 width={300}
                 height={200}
@@ -178,9 +244,11 @@ export default function CoursesPage() {
                 学生スポットサービス
               </Typography>
               <Typography variant="body-sm" className="text-gray mb-4">
-                エッセイ添削、面接練習など
+                エッセイ添削
                 <br />
-                ¥xx,xxx
+                面接練習・対策
+                <br />
+                オンラインコンシェルジュ
               </Typography>
               <Link href="/courses/study-spot">
                 <Button variant="secondary" size="sm" className="w-full">
@@ -193,13 +261,15 @@ export default function CoursesPage() {
           {/* 最終カウンセリングバナー */}
           <div className="relative">
             <div className="max-w-4xl mx-auto">
-              <Image
-                src="/images/main_banner.png"
-                alt="30分の無料カウンセリングでご相談ください"
-                width={1200}
-                height={400}
-                className="w-full h-auto rounded-2xl shadow-lg"
-              />
+              <Link href="/contact">
+                <Image
+                  src="/images/main_banner.png"
+                  alt="30分の無料カウンセリングでご相談ください"
+                  width={1200}
+                  height={400}
+                  className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
+                />
+              </Link>
             </div>
           </div>
         </Container>

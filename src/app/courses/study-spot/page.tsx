@@ -4,7 +4,9 @@ import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
 import Image from 'next/image';
-import { getSpotServicesByType } from '@/data/courses';
+import { FaEdit, FaUsers, FaHeadset, FaGraduationCap, FaBriefcase, FaQuestionCircle } from 'react-icons/fa';
+import Hero from '@/components/sections/Hero';
+// import { getSpotServicesByType } from '@/data/courses';
 
 export const metadata = {
   title: '学生スポットサービス - 留学・就活の重要な場面でサポート | Engrowth',
@@ -13,198 +15,135 @@ export const metadata = {
 };
 
 export default function StudentSpotServicePage() {
-  const studentSpotServices = getSpotServicesByType('student-spot');
+  // const studentSpotServices = getSpotServicesByType('student-spot');
 
   return (
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
-      <Section background="warm-white" padding="xl">
-        <Container>
-          <div className="text-center mb-16">
-            <Typography variant="heading-lg" className="text-dark-gray mb-6" as="h1">
-              学生スポットサービス
-            </Typography>
-            <Typography variant="body-lg" className="text-gray max-w-3xl mx-auto mb-8">
-              留学・就活の重要な場面で必要なサポートを、経験豊富な日本人コンサルタントが提供します。
-            </Typography>
-          </div>
+      <Hero
+        title=""
+        subtitle={null}
+        bgDesktopSrc="/images/spot-student/spot-students_hero.png"
+        bgMobileSrc="/images/hero_sma/spot-student_hero_sma.png"
+        bgPosition="center 30%"
+        className="flex items-center justify-center text-center"
+        imageWidth={2021}
+        imageHeight={748}
+      />
 
-          {/* 2つのメインサービス */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
+      {/* 2. 3つのメインサービス */}
+      <Section background="light-gray" className="py-16 sm:py-20 lg:py-32 pb-0">
+        <Container>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* エッセイ添削 */}
-            <Card className="text-center p-6 border-2 border-gray-200 hover:border-blue-600 transition-all duration-300">
+            <Card className="text-center p-6 border-2 border-gray-200 hover:border-red-600 transition-all duration-300">
               <div className="w-16 h-16 bg-light-gray rounded-full flex items-center justify-center mx-auto mb-4">
-                <Image
-                  src="/images/essay-editing-icon.jpg"
-                  alt="エッセイ添削"
-                  width={32}
-                  height={32}
-                  className="w-8 h-8"
-                />
+                <FaEdit className="w-8 h-8" style={{color: '#d30306'}} />
               </div>
-              <Typography variant="heading-sm" className="text-dark-gray mb-2">
+              <Typography variant="heading-sm" className="text-dark-gray card-title">
                 エッセイ添削
               </Typography>
-              <Typography variant="body-sm" className="text-gray mb-4">
+              <Typography variant="body-sm" className="text-gray card-description">
                 留学申請・就活用エッセイの
                 <br />
-                プロフェッショナル添削
+                プロフェッショナル添削など
               </Typography>
             </Card>
 
             {/* 面接練習・対策 */}
-            <Card className="text-center p-6 border-2 border-gray-200 hover:border-blue-600 transition-all duration-300">
+            <Card className="text-center p-6 border-2 border-gray-200 hover:border-red-600 transition-all duration-300">
               <div className="w-16 h-16 bg-light-gray rounded-full flex items-center justify-center mx-auto mb-4">
-                <Image
-                  src="/images/interview-practice-icon.jpg"
-                  alt="面接練習・対策"
-                  width={32}
-                  height={32}
-                  className="w-8 h-8"
-                />
+                <FaUsers className="w-8 h-8" style={{color: '#d30306'}} />
               </div>
-              <Typography variant="heading-sm" className="text-dark-gray mb-2">
+              <Typography variant="heading-sm" className="text-dark-gray card-title">
                 面接練習・対策
               </Typography>
-              <Typography variant="body-sm" className="text-gray mb-4">
+              <Typography variant="body-sm" className="text-gray card-description">
                 留学・就活面接の
                 <br />
                 実践的な練習とフィードバック
+              </Typography>
+            </Card>
+
+            {/* オンラインコンシェルジュ */}
+            <Card className="text-center p-6 border-2 border-gray-200 hover:border-red-600 transition-all duration-300">
+              <div className="w-16 h-16 bg-light-gray rounded-full flex items-center justify-center mx-auto mb-4">
+                <FaHeadset className="w-8 h-8" style={{color: '#d30306'}} />
+              </div>
+              <Typography variant="heading-sm" className="text-dark-gray card-title">
+                オンラインコンシェルジュ
+              </Typography>
+              <Typography variant="body-sm" className="text-gray card-description">
+                学習相談・進路相談から
+                <br />
+                日常的な英語学習サポート
               </Typography>
             </Card>
           </div>
         </Container>
       </Section>
 
-      {/* 2. こんな時に、ご利用ください */}
-      <Section background="light-gray" padding="xl">
+      {/* 3. こんな時に、ご利用ください */}
+      <Section background="light-gray" className="py-16 sm:py-20 lg:py-32 pt-0">
         <Container>
-          <div className="text-center mb-16">
-            <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
+          <div className="text-center py-8">
+            <Typography variant="heading-lg" className="text-dark-gray" as="h2">
               こんな時に、ご利用ください。
             </Typography>
           </div>
 
           <div className="max-w-4xl mx-auto space-y-6 mb-16">
             <div className="flex items-start gap-4">
-              <div className="w-6 h-6 bg-gray rounded-full flex-shrink-0 mt-1">
-                <Image
-                  src="/images/speech-bubble.jpg"
-                  alt="吹き出し"
-                  width={24}
-                  height={24}
-                  className="w-full h-full rounded-full"
-                />
+              <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <FaGraduationCap className="w-4 h-4" style={{color: '#d30306'}} />
               </div>
-              <Typography variant="body-md" className="text-dark-gray">
+              <Typography variant="body-md" className="text-dark-gray" style={{fontSize: '20px'}}>
                 留学申請用エッセイの完成度を上げたい
               </Typography>
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="w-6 h-6 bg-gray rounded-full flex-shrink-0 mt-1">
-                <Image
-                  src="/images/speech-bubble.jpg"
-                  alt="吹き出し"
-                  width={24}
-                  height={24}
-                  className="w-full h-full rounded-full"
-                />
+              <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <FaBriefcase className="w-4 h-4" style={{color: '#d30306'}} />
               </div>
-              <Typography variant="body-md" className="text-dark-gray">
-                就活用の英語エッセイを確認してほしい
+              <Typography variant="body-md" className="text-dark-gray" style={{fontSize: '20px'}}>
+              英語面接の練習をしたい
               </Typography>
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="w-6 h-6 bg-gray rounded-full flex-shrink-0 mt-1">
-                <Image
-                  src="/images/speech-bubble.jpg"
-                  alt="吹き出し"
-                  width={24}
-                  height={24}
-                  className="w-full h-full rounded-full"
-                />
+              <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <FaQuestionCircle className="w-4 h-4" style={{color: '#d30306'}} />
               </div>
-              <Typography variant="body-md" className="text-dark-gray">
-                英語面接の練習をしたい
-              </Typography>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="w-6 h-6 bg-gray rounded-full flex-shrink-0 mt-1">
-                <Image
-                  src="/images/speech-bubble.jpg"
-                  alt="吹き出し"
-                  width={24}
-                  height={24}
-                  className="w-full h-full rounded-full"
-                />
-              </div>
-              <Typography variant="body-md" className="text-dark-gray">
-                留学面接の対策をしたい
+              <Typography variant="body-md" className="text-dark-gray" style={{fontSize: '20px'}}>
+              現地で銀行口座開設を1人でするのは不安だからオンラインでサポートしてほしい
               </Typography>
             </div>
           </div>
 
           {/* カウンセリングバナー */}
-          <div className="relative mb-16">
-            <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl overflow-hidden">
+          <div className="relative">
+            <div className="max-w-4xl mx-auto">
               <Image
-                src="/images/student-counseling-banner.jpg"
-                alt="30分の無料カウンセリング"
-                width={800}
-                height={300}
-                className="w-full h-auto"
+                src="/images/main_banner.png"
+                alt="30分の無料カウンセリングでご相談ください"
+                width={1200}
+                height={400}
+                className="w-full h-auto shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
               />
-              
-              {/* オーバーレイコンテンツ */}
-              <div className="absolute inset-0 flex items-center">
-                <div className="flex flex-col md:flex-row items-center justify-between w-full px-8 md:px-16">
-                  {/* 左側：カンタン2ステップ吹き出し */}
-                  <div className="relative mb-6 md:mb-0">
-                    <div className="bg-white rounded-full px-6 py-3 relative">
-                      <Typography variant="body-md" className="text-dark-gray font-bold">
-                        カンタン2ステップ！
-                      </Typography>
-                      {/* 吹き出しの矢印 */}
-                      <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-white"></div>
-                    </div>
-                  </div>
-
-                  {/* 中央：メインテキスト */}
-                  <div className="text-center text-white mb-6 md:mb-0">
-                    <Typography variant="heading-md" className="text-white mb-2">
-                      30分の無料カウンセリングでご相談ください
-                    </Typography>
-                  </div>
-
-                  {/* 右側：無料バッジ + CTAボタン */}
-                  <div className="flex items-center gap-4">
-                    <div className="bg-white text-action-green px-4 py-2 rounded-full">
-                      <Typography variant="body-md" className="font-bold">
-                        無料
-                      </Typography>
-                    </div>
-                    <Button variant="primary" size="lg" className="bg-action-green hover:bg-green-700 text-white">
-                      カウンセリングを予約する
-                    </Button>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </Container>
       </Section>
 
       {/* 3. 料金例 */}
-      <Section background="warm-white" padding="xl">
+      <Section background="warm-white" className="py-16 sm:py-20 lg:py-32">
         <Container>
           <div className="text-center mb-16">
             <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
               料金例
             </Typography>
-            <Typography variant="body-lg" className="text-gray max-w-3xl mx-auto mb-8">
+            <Typography variant="body-lg" className="text-gray max-w-5xl mx-auto mb-8">
               学生向け特別価格で、質の高いサポートを提供いたします。
               <br />
               詳細なお見積もりは無料でご提供いたします。まずはお気軽にお問い合わせください。
@@ -220,14 +159,14 @@ export default function StudentSpotServicePage() {
                 （1本）
               </Typography>
               <div className="text-center mb-4">
-                <Typography variant="heading-lg" className="text-blue-600">
-                  ¥5,000〜
+                <Typography variant="heading-lg" className="text-brand-red">
+                  ¥18,000〜
                 </Typography>
                 <Typography variant="body-sm" className="text-gray">
                   文字数・専門性により変動
                 </Typography>
               </div>
-              <div className="space-y-2 text-left">
+              <div className="space-y-2 text-center">
                 <Typography variant="body-xs" className="text-gray">
                   • 構成・内容チェック
                 </Typography>
@@ -248,14 +187,14 @@ export default function StudentSpotServicePage() {
                 （1時間）
               </Typography>
               <div className="text-center mb-4">
-                <Typography variant="heading-lg" className="text-blue-600">
+                <Typography variant="heading-lg" className="text-brand-red">
                   ¥8,000〜
                 </Typography>
                 <Typography variant="body-sm" className="text-gray">
                   面接種類により変動
                 </Typography>
               </div>
-              <div className="space-y-2 text-left">
+              <div className="space-y-2 text-center">
                 <Typography variant="body-xs" className="text-gray">
                   • 模擬面接実施
                 </Typography>
@@ -270,31 +209,31 @@ export default function StudentSpotServicePage() {
           </div>
 
           {/* 料金に関するご注意 */}
-          <div className="bg-light-gray rounded-2xl p-8 max-w-4xl mx-auto mb-16">
+          <div className="bg-light-gray rounded-2xl p-8 max-w-4xl mx-auto">
             <Typography variant="heading-sm" className="text-dark-gray mb-6 text-center">
               料金に関するご注意
             </Typography>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-blue-600 rounded-full mt-3 flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-brand-red rounded-full mt-3 flex-shrink-0"></div>
                 <Typography variant="body-sm" className="text-dark-gray">
                   学生証提示で学生価格適用
                 </Typography>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-blue-600 rounded-full mt-3 flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-brand-red rounded-full mt-3 flex-shrink-0"></div>
                 <Typography variant="body-sm" className="text-dark-gray">
                   複数回利用で割引制度あり
                 </Typography>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-blue-600 rounded-full mt-3 flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-brand-red rounded-full mt-3 flex-shrink-0"></div>
                 <Typography variant="body-sm" className="text-dark-gray">
                   事前のお見積もりは無料でご提供
                 </Typography>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-blue-600 rounded-full mt-3 flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-brand-red rounded-full mt-3 flex-shrink-0"></div>
                 <Typography variant="body-sm" className="text-dark-gray">
                   急ぎの場合は緊急対応も可能
                 </Typography>
@@ -305,11 +244,11 @@ export default function StudentSpotServicePage() {
       </Section>
 
       {/* 4. 学生の夢を諦めさせない */}
-      <Section background="light-gray" padding="xl">
+      <Section background="light-gray" className="py-16 sm:py-20 lg:py-32">
         <Container>
           <div className="text-center mb-16">
             <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
-              学生の夢を諦めさせない
+              英語を身につけて、世界中の人と出会おう
             </Typography>
             <Typography variant="body-lg" className="text-gray max-w-4xl mx-auto mb-8">
               「どこから手をつけていいかわからない」「完璧にできるか不安」といったお悩みも大歓迎です。
@@ -321,15 +260,15 @@ export default function StudentSpotServicePage() {
           </div>
 
           {/* サポート内容 */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <Card className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4">
                 <Image
-                  src="/images/writing-support.jpg"
+                  src="/images/supporters/supporters-income-opportunity.jpg"
                   alt="ライティング支援"
-                  width={32}
-                  height={32}
-                  className="w-8 h-8"
+                  width={80}
+                  height={80}
+                  className="w-full h-full object-cover"
                 />
               </div>
               <Typography variant="heading-sm" className="text-dark-gray mb-3">
@@ -347,13 +286,13 @@ export default function StudentSpotServicePage() {
             </Card>
 
             <Card className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4">
                 <Image
-                  src="/images/speaking-support.jpg"
+                  src="/images/students/students-class-understanding.jpg"
                   alt="スピーキング支援"
-                  width={32}
-                  height={32}
-                  className="w-8 h-8"
+                  width={80}
+                  height={80}
+                  className="w-full h-full object-cover"
                 />
               </div>
               <Typography variant="heading-sm" className="text-dark-gray mb-3">
@@ -371,17 +310,17 @@ export default function StudentSpotServicePage() {
             </Card>
 
             <Card className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4">
                 <Image
-                  src="/images/strategy-support.jpg"
-                  alt="戦略的サポート"
-                  width={32}
-                  height={32}
-                  className="w-8 h-8"
+                  src="/images/method/method-practical-advice.jpg"
+                  alt="総合的サポート"
+                  width={80}
+                  height={80}
+                  className="w-full h-full object-cover"
                 />
               </div>
               <Typography variant="heading-sm" className="text-dark-gray mb-3">
-                戦略的サポート
+                総合的サポート
               </Typography>
               <Typography variant="body-sm" className="text-gray">
                 出願戦略、スケジュール管理、
@@ -395,8 +334,8 @@ export default function StudentSpotServicePage() {
             </Card>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-6 justify-center max-w-2xl mx-auto">
-            <Button variant="primary" size="lg" className="bg-action-green hover:bg-green-700 text-white flex-1">
+          <div className="flex flex-col md:flex-row gap-6 justify-center max-w-2xl mx-auto mt-12">
+            <Button variant="primary" size="lg" className="text-white flex-1" style={{ backgroundColor: "#0cc755" }} href="https://lin.ee/4h74yvj">
               LINEで相談
             </Button>
             <Button variant="secondary" size="lg" className="flex-1">

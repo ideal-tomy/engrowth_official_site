@@ -1,9 +1,12 @@
+import Link from 'next/link';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 import Typography from '@/components/ui/Typography';
 import Container from '@/components/layout/Container';
 import Section from '@/components/layout/Section';
 import Image from 'next/image';
+import { FaMicrophone, FaLanguage, FaGlobe, FaUsers, FaChartLine, FaDesktop } from 'react-icons/fa';
+import Hero from '@/components/sections/Hero';
 
 export const metadata = {
   title: 'ビジネススポットサービス - 必要な時に必要なサポートを | Engrowth',
@@ -11,47 +14,42 @@ export const metadata = {
   keywords: 'Engrowth, ビジネススポット, 通訳, 翻訳, プレゼンテーション, 会議同席',
 };
 
-export default function BusinessSpotServicePage() {
+function BusinessSpotServicePage() {
   return (
     <div className="min-h-screen">
       {/* 1. ヒーローセクション */}
-      <Section background="warm-white" padding="xl">
-        <Container>
-          <div className="text-center mb-16">
-            <Typography variant="heading-lg" className="text-dark-gray mb-6" as="h1">
-              ビジネススポットサービス
-            </Typography>
-            <Typography variant="body-lg" className="text-gray max-w-3xl mx-auto mb-8">
-              ビジネスシーンで必要な英語サポートを、経験豊富なプロフェッショナルが提供します。
-            </Typography>
-          </div>
+      <Hero
+        title=""
+        subtitle={null}
+        bgDesktopSrc="/images/spot-business/spot-business_hero.png"
+        bgMobileSrc="/images/hero_sma/spot-business_hero_sma.png"
+        bgPosition="center 30%"
+        className="flex items-center justify-center text-center"
+        imageWidth={2021}
+        imageHeight={748}
+      />
 
-          {/* 3つのサービス */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
+      {/* 2. 3つのサービス */}
+      <Section background="light-gray" className="py-16 sm:py-20 lg:py-32 pb-0">
+        <Container>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* 通訳・会議同席 */}
             <Card className="p-6 border-2 border-gray-200 hover:border-brand-red transition-all duration-300">
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-16 h-16 bg-light-gray rounded-full flex items-center justify-center flex-shrink-0">
-                  <Image
-                    src="/images/interpretation-icon.jpg"
-                    alt="通訳・会議同席"
-                    width={32}
-                    height={32}
-                    className="w-8 h-8"
-                  />
+                  <FaMicrophone className="w-8 h-8 text-brand-red" />
                 </div>
                 <div className="flex-1">
                   <Typography variant="heading-sm" className="text-dark-gray">
-                    通訳・会議同席
+                    通訳 <br />会議同席
                   </Typography>
                 </div>
               </div>
               <Typography variant="body-sm" className="text-gray leading-relaxed">
                 重要な会議やプレゼンテーションで、
                 <br />
-                リアルタイムでの通訳サポートを
-                <br />
-                提供いたします。
+                リアルタイムでの通訳サポートを提供いたします。
+                
               </Typography>
             </Card>
 
@@ -59,26 +57,19 @@ export default function BusinessSpotServicePage() {
             <Card className="p-6 border-2 border-gray-200 hover:border-brand-red transition-all duration-300">
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-16 h-16 bg-light-gray rounded-full flex items-center justify-center flex-shrink-0">
-                  <Image
-                    src="/images/translation-icon.jpg"
-                    alt="資料作成・翻訳サポート"
-                    width={32}
-                    height={32}
-                    className="w-8 h-8"
-                  />
+                  <FaLanguage className="w-8 h-8 text-brand-red" />
                 </div>
                 <div className="flex-1">
                   <Typography variant="heading-sm" className="text-dark-gray">
-                    資料作成・翻訳サポート
+                    資料作成 <br />翻訳サポート
                   </Typography>
                 </div>
               </div>
               <Typography variant="body-sm" className="text-gray leading-relaxed">
-                英語資料の作成や既存資料の
+                英語資料の作成や既存資料の翻訳を、
                 <br />
-                翻訳を、専門知識を持つ
-                <br />
-                プロフェッショナルが担当します。
+                専門知識を持つプロフェッショナルが担当します。
+               
               </Typography>
             </Card>
 
@@ -86,51 +77,36 @@ export default function BusinessSpotServicePage() {
             <Card className="p-6 border-2 border-gray-200 hover:border-brand-red transition-all duration-300">
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-16 h-16 bg-light-gray rounded-full flex items-center justify-center flex-shrink-0">
-                  <Image
-                    src="/images/presentation-icon.jpg"
-                    alt="プレゼンテーション準備"
-                    width={32}
-                    height={32}
-                    className="w-8 h-8"
-                  />
+                  <FaDesktop className="w-8 h-8 text-brand-red" />
                 </div>
                 <div className="flex-1">
                   <Typography variant="heading-sm" className="text-dark-gray">
-                    プレゼンテーション準備
+                    プレゼン資料 <br />作成サポート
                   </Typography>
                 </div>
               </div>
               <Typography variant="body-sm" className="text-gray leading-relaxed">
-                英語でのプレゼンテーション準備から
-                <br />
-                本番での発表まで、トータルで
-                <br />
-                サポートいたします。
+              事前に日本語のプレゼン資料をご用意いただき、英語翻訳から英語でのプレゼンリハーサルまで
+              トータルでサポートいたします。
               </Typography>
             </Card>
           </div>
         </Container>
       </Section>
 
-      {/* 2. こんな時に、ご利用ください */}
-      <Section background="light-gray" padding="xl">
+      {/* 3. こんな時に、ご利用ください */}
+      <Section background="light-gray" className="py-16 sm:py-20 lg:py-32 pt-0">
         <Container>
-          <div className="text-center mb-16">
-            <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
+          <div className="text-center py-8">
+            <Typography variant="heading-lg" className="text-dark-gray" as="h2">
               こんな時に、ご利用ください。
             </Typography>
           </div>
 
           <div className="max-w-4xl mx-auto space-y-6 mb-16">
             <div className="flex items-start gap-4">
-              <div className="w-6 h-6 bg-gray rounded-full flex-shrink-0 mt-1">
-                <Image
-                  src="/images/speech-bubble.jpg"
-                  alt="吹き出し"
-                  width={24}
-                  height={24}
-                  className="w-full h-full rounded-full"
-                />
+              <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <FaGlobe className="w-4 h-4 text-brand-red" />
               </div>
               <Typography variant="body-md" className="text-dark-gray" style={{fontSize: '20px'}}>
                 海外から自社製品に関する問い合わせが来た
@@ -138,14 +114,8 @@ export default function BusinessSpotServicePage() {
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="w-6 h-6 bg-gray rounded-full flex-shrink-0 mt-1">
-                <Image
-                  src="/images/speech-bubble.jpg"
-                  alt="吹き出し"
-                  width={24}
-                  height={24}
-                  className="w-full h-full rounded-full"
-                />
+              <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <FaUsers className="w-4 h-4 text-brand-red" />
               </div>
               <Typography variant="body-md" className="text-dark-gray" style={{fontSize: '20px'}}>
                 英語が話せるメンバーが急遽会議に参加できなくなってしまった
@@ -153,14 +123,8 @@ export default function BusinessSpotServicePage() {
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="w-6 h-6 bg-gray rounded-full flex-shrink-0 mt-1">
-                <Image
-                  src="/images/speech-bubble.jpg"
-                  alt="吹き出し"
-                  width={24}
-                  height={24}
-                  className="w-full h-full rounded-full"
-                />
+              <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <FaChartLine className="w-4 h-4 text-brand-red" />
               </div>
               <Typography variant="body-md" className="text-dark-gray" style={{fontSize: '20px'}}>
                 来週、海外チームへのプレゼンをすることに・・・
@@ -169,28 +133,30 @@ export default function BusinessSpotServicePage() {
           </div>
 
           {/* カウンセリングバナー */}
-          <div className="relative mb-16">
+          <div className="relative">
             <div className="max-w-4xl mx-auto">
-              <Image
-                src="/images/main_banner.png"
-                alt="30分の無料カウンセリングでご相談ください"
-                width={1200}
-                height={400}
-                className="w-full h-auto rounded-2xl shadow-lg"
-              />
+              <Link href="/contact">
+                <Image
+                  src="/images/main_banner.png"
+                  alt="30分の無料カウンセリングでご相談ください"
+                  width={1200}
+                  height={400}
+                  className="w-full h-auto  shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                />
+              </Link>
             </div>
           </div>
         </Container>
       </Section>
 
       {/* 3. 料金例 */}
-      <Section background="warm-white" padding="xl">
+      <Section background="warm-white" className="py-16 sm:py-20 lg:py-32">
         <Container>
           <div className="text-center mb-16">
             <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
               料金例
             </Typography>
-            <Typography variant="body-lg" className="text-gray max-w-3xl mx-auto mb-8">
+            <Typography variant="body-lg" className="text-gray max-w-5xl mx-auto mb-8">
               透明性の高い料金設定で、安心してご利用いただけます。
               <br />
               詳細なお見積もりは無料でご提供いたします。まずはお気軽にお問い合わせください。
@@ -223,7 +189,7 @@ export default function BusinessSpotServicePage() {
             <Card className="text-center p-6 border border-gray-200 h-full flex flex-col">
               <div className="mb-4 flex-shrink-0" style={{minHeight: '3rem'}}>
                 <Typography variant="heading-sm" className="text-dark-gray">
-                  資料翻訳
+                  資料作成・翻訳
                   <br />
                   （A4 1ページ）
                 </Typography>
@@ -244,9 +210,9 @@ export default function BusinessSpotServicePage() {
             <Card className="text-center p-6 border border-gray-200 h-full flex flex-col">
               <div className="mb-4 flex-shrink-0" style={{minHeight: '3rem'}}>
                 <Typography variant="heading-sm" className="text-dark-gray">
-                  プレゼン支援
+                  プレゼンテーション
                   <br />
-                  （半日）
+                  準備
                 </Typography>
               </div>
               <div className="text-center mb-4 flex-shrink-0" style={{minHeight: '4rem'}}>
@@ -265,7 +231,7 @@ export default function BusinessSpotServicePage() {
           </div>
 
           {/* 料金に関するご注意 */}
-          <div className="bg-light-gray rounded-2xl p-8 max-w-4xl mx-auto mb-16">
+          <div className="bg-light-gray  p-8 max-w-4xl mx-auto">
             <Typography variant="heading-sm" className="text-dark-gray mb-6 text-center">
               料金に関するご注意
             </Typography>
@@ -300,9 +266,9 @@ export default function BusinessSpotServicePage() {
       </Section>
 
       {/* 4. ビジネスチャンスを逃さないために */}
-      <Section background="light-gray" padding="xl">
+      <Section background="light-gray" className="py-16 sm:py-20 lg:py-32">
         <Container>
-          <div className="text-center mb-16">
+          <div className="text-center">
             <Typography variant="heading-lg" className="text-dark-gray mb-8" as="h2">
               ビジネスチャンスを逃さないために
             </Typography>
@@ -316,7 +282,7 @@ export default function BusinessSpotServicePage() {
           </div>
 
           <div className="flex flex-col md:flex-row gap-6 justify-center max-w-2xl mx-auto">
-            <Button variant="primary" size="lg" className="bg-action-green hover:bg-green-700 text-white flex-1">
+            <Button variant="primary" size="lg" className="text-white flex-1" style={{backgroundColor: '#0cc755'}} href="https://lin.ee/4h74yvj">
               LINEで相談
             </Button>
             <Button variant="secondary" size="lg" className="flex-1">
@@ -328,3 +294,5 @@ export default function BusinessSpotServicePage() {
     </div>
   );
 }
+
+export default BusinessSpotServicePage;
