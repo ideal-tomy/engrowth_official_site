@@ -27,69 +27,6 @@ export default function AboutPage() {
         className="flex items-center justify-center text-center"
       />
 
-      {/* 2. 3つの特徴 */}
-      <Section background="light-gray" className="py-12 sm:py-16 lg:py-24">
-        <SectionHeaderLeft
-          label="Features"
-          title="Engrowthが選ばれる3つの理由"
-          desc="従来の英語学習にはない、科学的根拠と実践経験に基づいた独自のアプローチで確実な成果を実現します。"
-          className="mb-12 lg:mb-16"
-        />
-        
-        <Container className="px-6 lg:px-8">
-          <div className="space-y-8 max-w-4xl mx-auto mb-16">
-            <div className="flex items-start gap-6">
-              <FaUserTie className="w-8 h-8 text-brand-red flex-shrink-0 mt-2" />
-              <div>
-                <Typography variant="heading-md" className="text-dark-gray font-bold mb-2 font-serif">
-                  コンサルタントも以前は英語が話せなかった日本人
-                </Typography>
-                <Typography variant="body-lg" className="text-dark-gray">
-                  日本人だからこそわかる、つまずくポイントを克服しながら学習を進めます。
-                </Typography>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-6">
-              <FaFlask className="w-8 h-8 text-brand-red flex-shrink-0 mt-2" />
-              <div>
-                <Typography variant="heading-md" className="text-dark-gray font-bold mb-2 font-serif">
-                  脳科学や神経言語学などの科学的根拠に基づいたプログラム
-                </Typography>
-                <Typography variant="body-lg" className="text-dark-gray">
-                  英語が苦手なあなたでも、着実な英語力の向上を実現します。
-                </Typography>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-6">
-              <FaUsers className="w-8 h-8 text-brand-red flex-shrink-0 mt-2" />
-              <div>
-                <Typography variant="heading-md" className="text-dark-gray font-bold mb-2 font-serif">
-                  コンサルタントは全員、海外留学経験者
-                </Typography>
-                <Typography variant="body-lg" className="text-dark-gray">
-                  日本の学校で習う、ネイティブが使わない英語は除外し、
-                  現地で使える生きた英語を身に付けることができます。
-                </Typography>
-              </div>
-            </div>
-          </div>
-
-          {/* 無料カウンセリングバナー */}
-          <div className="relative">
-            <Link href="/contact">
-              <Image
-                src="/images/main_banner.png"
-                alt="30分の無料カウンセリング"
-                width={1200}
-                height={300}
-                className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
-              />
-            </Link>
-          </div>
-        </Container>
-      </Section>
 
       {/* 2. Engrowthの仕組み */}
       <Section background="light-gray" className="py-12 sm:py-16 lg:py-24">

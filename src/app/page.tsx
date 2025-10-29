@@ -35,9 +35,9 @@ export default function Home() {
             自分が生きたい人生を。
             </h1>
             <p className="text-white mb-4 sm:mb-8 md:mb-10 max-w-[65ch] mx-auto text-xs sm:text-base md:text-lg leading-relaxed" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.7)' }}>
-            英語力と人間力で、誰かの可能性を広げながら、
+            英語力と人間力で、あなた自身の可能性を広げながら、
               <br />
-              あなた自身の未来も切り拓く。
+              だれかの可能性も広げる。
             </p>
             <div className="flex flex-row gap-2 sm:gap-4 justify-center mx-auto max-w-xl">
   <Link
@@ -58,7 +58,27 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. What is Engrowth Section - 2カラムレイアウト */}
+      {/* 2. Why Engrowth Section */}
+      <Section background="white" className="py-12 sm:py-16 lg:py-24">
+        <Container className="px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <p className="text-sm sm:text-base tracking-wider font-medium font-serif mb-4 text-brand-red">
+              Why Engrowth
+            </p>
+            <Typography variant="heading-lg" className="text-dark-gray mb-6 font-serif">
+              We're in business to transform our education.
+            </Typography>
+            <Typography variant="body-lg" className="text-gray leading-relaxed mb-6">
+              私たちはビジネスの力で教育の在り方を変えるために存在しています。
+            </Typography>
+            <Typography variant="body-lg" className="text-gray leading-relaxed">
+              Engrowthが目指すのは、利益の最大化ではなく、学びの循環によって従来の教育の在り方を変え、一人ひとりの可能性を切り拓くこと、ひいては英語話者が増えることによって日本の国力を上げることです。
+            </Typography>
+          </div>
+        </Container>
+      </Section>
+
+      {/* 3. What is Engrowth Section - 2カラムレイアウト */}
       <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
         <Container className="px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
@@ -126,7 +146,7 @@ export default function Home() {
         </Container>
       </Section>
 
-      {/* 2. 科学的根拠セクション */}
+      {/* 4. 科学的根拠セクション */}
       <Section background="light-gray" className="py-12 sm:py-16 lg:py-24">
         <Container className="px-6 lg:px-8">
           <EvidenceSection
@@ -137,7 +157,7 @@ export default function Home() {
         </Container>
       </Section>
 
-      {/* 3. 学習メソッドセクション */}
+      {/* 5. 学習メソッドセクション */}
       <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
         <Container className="px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
@@ -153,7 +173,7 @@ export default function Home() {
         </Container>
       </Section>
 
-      {/* 4. Course Section (4-column) */}
+      {/* 6. Course Section (4-column) */}
       <Section background="light-gray" className="py-12 sm:py-16 lg:py-24 overflow-visible">
         <Container className="px-6 lg:px-8">
           <SectionHeaderLeft
@@ -177,7 +197,7 @@ export default function Home() {
         </FullBleed1440>
       </Section>
 
-      {/* 4. 無料カウンセリングバナー（画像のみ） */}
+      {/* 7. 無料カウンセリングバナー（画像のみ） */}
       <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
         <Container className="px-6 lg:px-8">
           <div className="relative">
@@ -194,7 +214,7 @@ export default function Home() {
         </Container>
       </Section>
 
-      {/* 5. 従来スクールとの違い（2カラム比較） */}
+      {/* 8. 従来スクールとの違い（2カラム比較） */}
       <Section background="warm-white" className="py-12 sm:py-16 lg:py-24">
         <Container className="px-6 lg:px-8">
           <SectionHeaderLeft

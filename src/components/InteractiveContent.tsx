@@ -96,7 +96,9 @@ export default function InteractiveContent() {
               </Typography>
               
               <Typography variant="body-lg" className="text-gray-700 leading-relaxed">
-                メンバー全員が海外大学・大学院で学びながら活動しており、時差も国籍も異なる環境の中で、「信頼」と「自律」を軸にクライアントワークを推進しています。
+              メンバー全員が海外大学・大学院で学びながら活動しており、時差も国籍も異なる環境の中で、
+              「信頼」と「自律」を軸にクライアントワークを推進しています。
+              ※一部既卒生も活動しています。
               </Typography>
               
               <div className="text-center my-6">
@@ -120,7 +122,7 @@ export default function InteractiveContent() {
                   </Typography>
                   
                   <Typography variant="body-lg" className="text-gray-700 leading-relaxed">
-                    私たちは、肩書きや年次ではなく、「どう在るか」で評価します。
+                    私たちは、肩書きや年齢ではなく、「どう在るか」で評価します。
                     互いを尊重し、率直にフィードバックを交わし合い、
                     『7つの習慣』に基づくリーダーシップを日々の対話と行動で磨いていく。
                   </Typography>

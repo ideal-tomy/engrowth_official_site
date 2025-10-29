@@ -258,6 +258,31 @@ export default function RecruitPage() {
             </Typography>
             
             <div className="space-y-8  pt-4 sm:pt-6 lg:pt-12">
+            <Card className="p-8 bg-white rounded-xl shadow-lg">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-8 h-8 bg-gray-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Typography variant="body-sm" className="text-white font-bold">
+                      Q
+                    </Typography>
+                  </div>
+                  <Typography variant="heading-sm" className="text-dark-gray font-serif">
+                  雇用形態は正社員契約ですか？
+                  </Typography>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center flex-shrink-0">
+                    <Typography variant="body-sm" className="text-white font-bold">
+                      A
+                    </Typography>
+                  </div>
+                  <div>
+                    <Typography variant="body-md" className="text-dark-gray font-serif">
+                    これは海外で活動するコンサルタントが受け取る手取り額を最大化するため、業務委託契約としております。
+                    </Typography>
+                  </div>
+                </div>
+              </Card>
+
               <Card className="p-8 bg-white rounded-xl shadow-lg">
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-8 h-8 bg-gray-500 rounded-full flex items-center justify-center flex-shrink-0">
