@@ -43,19 +43,13 @@ const VisionPage: React.FC = () => {
             </h2>
             <div className="prose prose-lg max-w-none text-dark-gray font-serif leading-relaxed">
               <p className="mb-6">
-                私たちが描くのは、<strong>「学びたい」という情熱と、「才能」が、経済的な理由や、不合理な market structureによって阻害されない未来</strong>です。
-              </p>
-              <p className="mb-6">
-                本気で学びたい人が、その熱量に見合う「最高品質の教育」に、適正な価格でアクセスできる世界。
+                私たちが描くのは、<strong>「学びたい」という情熱と才能が、経済的な理由によって阻害されない未来</strong>です。
               </p>
               <p className="mb-6">
                 高い志と才能を持つ優秀な人材が、経済的な不安によって「学ぶ機会」や「挑戦する機会」を奪われない世界。
               </p>
               <p className="mb-6">
                 そして、教育が、中間マージンによる「搾取」の対象ではなく、人と社会の未来に対する「公正な投資」として機能する世界。
-              </p>
-              <p className="text-xl font-semibold text-brand-red">
-                Engrowthは、この理想の未来を実現するために存在します。
               </p>
             </div>
           </section>
@@ -68,9 +62,6 @@ const VisionPage: React.FC = () => {
             <div className="prose prose-lg max-w-none text-dark-gray font-serif leading-relaxed mb-8">
               <p className="mb-6">
                 この理想を実現するため、Engrowthは独自の「エコシステム（関係性の構築）」と、それを支える「利益還元の仕組み（ビジネスモデル）」を構築しました。
-              </p>
-              <p className="mb-6">
-                私たちの哲学の核心に、ご興味のある方はぜひご覧ください。
               </p>
             </div>
 
@@ -119,49 +110,55 @@ const VisionPage: React.FC = () => {
             </h2>
             <div className="prose prose-lg max-w-none text-dark-gray font-serif leading-relaxed">
               <p className="mb-6">
-                しかし、この理想の実現を阻む、2つの深刻な「ミスマッチ」が日本には存在します。
+                現在の社会構造には、理想の実現を阻む、2つの深刻な「ミスマッチ」が日本には存在していると考えています。
               </p>
               <p className="mb-6">
-                私たちは、このミスマッチが引き起こす問題を、学習者個人や留学生個人の問題としてだけではなく、日本社会全体の深刻な「損失」であると捉えています。
+                そして私たちは、このミスマッチが引き起こす問題を、学習者個人や留学生個人の問題としてだけではなく、
+                日本社会全体の深刻な「損失」であると捉えています。
               </p>
             </div>
           </section>
 
           {/* Section 4: 課題（１）：日本の英語学習市場が抱える「ガチャ問題」 */}
           <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-gray font-serif mb-8">
-              4. 課題（１）：日本の英語学習市場が抱える「ガチャ問題」
+            <h2 className="text-3xl md:text-3xl font-bold text-dark-gray font-serif mb-8">
+              日本の英語学習市場が抱える「ガチャ問題」
             </h2>
             <div className="prose prose-lg max-w-none text-dark-gray font-serif leading-relaxed">
               <p className="mb-6">
                 一つ目の損失は、<strong>「学習者の無駄なコスト」</strong>です。
               </p>
               <p className="mb-6">
-                本気で英語を習得したいと願う人々がいます。しかし、日本の英語学習市場には、高額な広告費や運営費が上乗せされたサービスが溢れ、必ずしも「英語を教えるプロ」ではない人材による、テンプレ通りの指導も横行しています。
+                本気で英語を習得したいと願う人々がいます。しかし、日本の英語学習市場には、高額な広告費や運営費が上乗せされたサービスが溢れ、
+                必ずしも「英語を教えるプロ」ではない人材による、テンプレ通りの指導も横行しています。
               </p>
               <p className="mb-6">
-                学習者は、本物の学びに出会うために、まるで「ガチャ」のように当たり外れを賭けなければならない。その結果、貴重な「時間」と「予算」が、学習効果とは連動しないサービス事業者へと吸い上げられ、浪費されてしまっているのが現状です。
+                学習者は、本物の学びに出会うために、まるで「ガチャ」のように当たり外れを賭けなければならない。
+                その結果、貴重な「時間」と「予算」が、学習効果とは連動しないサービス事業者へと吸い上げられ、
+                浪費されてしまっているのが現状です。
               </p>
             </div>
           </section>
 
           {/* Section 5: 課題（２）：優秀な留学生が直面する「経済的な壁」 */}
           <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-gray font-serif mb-8">
-              5. 課題（２）：優秀な留学生が直面する「経済的な壁」
+            <h2 className="text-3xl md:text-3xl font-bold text-dark-gray font-serif mb-8">
+              優秀な留学生が直面する「経済的な壁」
             </h2>
             <div className="prose prose-lg max-w-none text-dark-gray font-serif leading-relaxed">
               <p className="mb-6">
                 二つ目の損失は、<strong>「未来の才能の喪失」</strong>です。
               </p>
               <p className="mb-6">
-                世界トップレベルの環境で、高度な英語力と専門知識を武器に学ぶ、優秀な日本人留学生たちがいます。彼ら・彼女らは、将来、日本社会に大きな価値を還元しうる「人財」です。
+                世界トップレベルの環境で、高度な英語力と専門知識を武器に学ぶ優秀な日本人留学生たちがいます。
+                彼ら・彼女らは、将来、日本社会に大きな価値を還元しうる「人財」です。
               </p>
               <p className="mb-6">
-                しかし、深刻な円安や物価高騰が、彼らの「学び」を脅かしています。高額な学費や生活費を賄うため、自身の専門性とは無関係な単純労働に貴重な時間を割かざるを得なかったり、最悪の場合、経済的な理由で留学そのものを断念せざるを得ない。
+                しかし、深刻な円安や物価高騰が、彼らの「学び」を脅かしています。
+                高額な学費や生活費を賄うことができず、学習意欲が高く優秀な成績を修めていた留学生が、留学そのものを断念した場面に何度も遭遇しました。
               </p>
               <p className="mb-6">
-                この「才能の喪失」は、本人だけの悲劇ではなく、日本という国にとっても計り知れない「社会的損失」です。
+                この「才能の喪失」は、本人だけではなく、日本という国にとっても計り知れない「社会的損失」であると考えています。
               </p>
             </div>
           </section>
@@ -183,7 +180,9 @@ const VisionPage: React.FC = () => {
                     <div>
                       <strong>学習者（クライアント）は：</strong>
                       <p className="mt-2">
-                        「ガチャ」に無駄なコストを支払う必要はもうありません。あなたの支払う費用は、あなたを指導する優秀なコンサルタント（留学生）の「学び」を支える資金となります。結果、あなたは「本物」のスキルを持つパートナーから、適正な価格で最高の学びを得ることができます。
+                        「ガチャ」に無駄なコストを支払う必要はもうありません。あなたの支払う費用は、
+                        あなたを指導する優秀なコンサルタント（留学生）の「学び」を支える資金となります。
+                        結果、あなたは「本物」のスキルを持つパートナーから、適正な価格で最高の学びを得ることができます。
                       </p>
                     </div>
                   </li>
@@ -209,7 +208,8 @@ const VisionPage: React.FC = () => {
               </div>
 
               <p className="text-xl font-semibold text-brand-red">
-                私たちは、この「学習者」「留学生」「日本社会」のすべてにメリットをもたらす「三方よし」の循環こそが、理想の未来を実現する鍵だと信じています。
+                私たちは、この「学習者」「留学生」「日本社会」のすべてにメリットをもたらす「三方よし」の循環こそが、
+                理想の未来を実現するために必要だと考えています。
               </p>
             </div>
           </section>
@@ -221,16 +221,23 @@ const VisionPage: React.FC = () => {
             </h2>
             <div className="prose prose-lg max-w-none text-dark-gray font-serif leading-relaxed">
               <p className="mb-6">
-                この「三方よし」のエコシステムは、多くの人が理想として掲げたい姿かもしれません。しかし、現在の株式会社の仕組みの中では、これを実現するには構造的な困難が伴います。
+                この「三方よし」のエコシステムは、多くの人が理想として掲げたい姿かもしれません。
+                しかし、現在の株式会社の仕組みの中では、これを実現するには構造的な困難が伴います。
               </p>
               <p className="mb-6">
                 多くの株式会社は、その仕組み上、「短期的な利益の最大化（可処分費用の獲得）」と「株主への還元」を最優先事項として運営されます。
               </p>
               <p className="mb-6">
-                これは企業として合理的な行動ですが、必然的に「中間マージン」の最大化が追求されます。結果として、最も価値を生み出している現場の個人（＝Engrowthにおける優秀なコンサルタント）への報酬は、構造的に低く抑えられざるを得ません。学習者が支払う費用は、学習の質そのものではなく、広告費や企業の内部留保に多くが充てられてしまいます。
+                これは企業として合理的な行動ですが、必然的に「中間マージン」の最大化が追求されます。
+                結果として、最も価値を生み出している現場の個人（＝Engrowthにおける優秀なコンサルタント）への報酬は、
+                構造的に低く抑えられざるを得ません。学習者が支払う費用は、学習の質そのものではなく、
+                広告費や企業の内部留保に多くが充てられてしまいます。
               </p>
               <p className="mb-6">
-                私たちは、この既存の仕組み自体を「否定」したいわけではありません。ただ、この構造（システム）が、日本の英語教育や留学生支援における「理想の実現」を阻む最大のボトルネックになっている、という「現実」を直視しています。
+                それらは各企業の経営に問題があるということでは決してなく、構造や社会環境の問題です。
+                私たちは、この既存の仕組み自体を「否定」したいわけではありません。
+                ただ、この構造（システム）が、日本の英語教育や留学生支援における「理想の実現」を阻む最大のボトルネックになっている、
+                という「現実」を踏まえ、学びの循環をより円滑に、持続的に行える環境が作り出せるのではないかと考え、Engrowthエコシステムを構築しました。
               </p>
             </div>
           </section>
@@ -238,7 +245,7 @@ const VisionPage: React.FC = () => {
           {/* Section 8: Engrowthの「答え」：利益の目的を反転させる */}
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-dark-gray font-serif mb-8">
-              8. Engrowthの「答え」：利益の目的を反転させる
+              8.利益の目的を反転させる
             </h2>
             <div className="prose prose-lg max-w-none text-dark-gray font-serif leading-relaxed">
               <p className="mb-6">
@@ -262,25 +269,28 @@ const VisionPage: React.FC = () => {
                 私たちは、一般的な株式会社が目指す「利益の最大化」や「株主還元」を最初から目指していません。私たちの使命は、あくまで<strong>「才能ある個人への適正な（そして最大限の）分配」</strong>です。
               </p>
 
-              <p className="mb-6">この「新しい仕組み」を採用するからこそ、Engrowthは以下の強みを発揮できます。</p>
+              <p className="mb-6">組織する目的そのものを帰ることによって、Engrowthは以下の強みを発揮できます。</p>
 
               <div className="bg-light-gray p-8 rounded-lg border border-gray-200">
                 <ul className="space-y-4">
                   <li className="flex items-start">
                     <span className="text-brand-red font-bold text-xl mr-4">•</span>
                     <div>
-                      <strong>クライアント（学習者）へ：</strong>
+                      <strong>クライアント（学習者）へ</strong>
                       <p className="mt-2">
-                        支払う費用の大半が、直接あなたを指導するコンサルタントの価値（報酬）となります。だからこそ、「適正価格」で「最高品質」の指導が実現します。
+                        支払う費用の大半が、直接あなたを指導するコンサルタントの価値（報酬）となります。
+                        そしてEngrowthのkんサルタント基準をクリアした英語力と指導力が担保されている講師からのサポートによって、
+                        「最高品質」の指導が実現します。
                       </p>
                     </div>
                   </li>
                   <li className="flex items-start">
                     <span className="text-brand-red font-bold text-xl mr-4">•</span>
                     <div>
-                      <strong>コンサルタント（留学生）へ：</strong>
+                      <strong>コンサルタント（留学生）へ</strong>
                       <p className="mt-2">
-                        深刻な為替問題（円安）下でも、アメリカ等で生活し学業に集中できるレベルの「高水準な報酬」を還元します。
+                        働くことに制限が設けられ、尚且つ深刻な為替問題（円安）下でも、
+                        アメリカ等で生活し学業に集中できるレベルの「高水準な報酬」が還元されます。
                       </p>
                     </div>
                   </li>
@@ -299,7 +309,8 @@ const VisionPage: React.FC = () => {
                 Engrowthは単なる英語コンサルティング会社ではありません。
               </p>
               <p className="mb-6">
-                私たちは、意欲ある学習者と、才能ある留学生を最適に結びつけることで、「学びたい人」「教えたい人」「日本という国」そのすべてにメリットをもたらす環境構築を目指す、社会変革パートナーです。
+                私たちは、意欲ある学習者と、才能ある留学生を最適に結びつけることで、
+                「学びたい人」「教えたい人」「日本という国」そのすべてにメリットをもたらす環境構築を目指す存在を目指しています。
               </p>
               <div className="bg-brand-red text-white p-8 rounded-lg text-center">
                 <p className="text-xl font-bold font-serif mb-4">
@@ -324,7 +335,7 @@ const VisionPage: React.FC = () => {
               理想の未来を一緒に実現しませんか？
             </h2>
             <p className="text-lg text-dark-gray font-serif mb-8 max-w-2xl mx-auto">
-              あなたの学びが、誰かの未来を支える。そんな循環を一緒に作り上げていきましょう。
+              あなたの学びが、誰かの未来を支える。
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
