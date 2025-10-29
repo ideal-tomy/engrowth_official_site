@@ -67,6 +67,7 @@ const Header: React.FC = () => {
       href: '/about',
       hasDropdown: true,
       dropdownItems: [
+        { name: 'Engrowthが実現したい世界', href: '/about/vision' },
         { name: 'Engrowthエコシステム', href: '/about/ecosystem' },
         { name: '専属コンサルタント', href: '/about/consultant' },
         { name: '科学的根拠', href: '/about/science' },
@@ -281,6 +282,13 @@ const Header: React.FC = () => {
                   }`}
                 >
                   <div className="py-2 pl-4 space-y-1">
+                    <Link
+                      href="/about/vision"
+                      className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200 font-serif"
+                      onClick={handleMobileMenuClose}
+                    >
+                      Engrowthが実現したい世界
+                    </Link>
                     <Link
                       href="/about/ecosystem"
                       className="block px-3 py-2 text-sm font-medium text-gray hover:text-brand-red hover:bg-light-gray rounded-md transition-colors duration-200 font-serif"
