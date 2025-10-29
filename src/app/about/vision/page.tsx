@@ -22,11 +22,14 @@ const VisionPage: React.FC = () => {
         <div className="absolute inset-0 bg-white opacity-20"></div>
         <div className="absolute inset-0 flex items-center justify-center text-center">
           <div className="p-6">
-            <h1 className="text-4xl md:text-6xl font-bold font-serif mb-6 text-white">
+            <h1 className="text-2xl md:text-6xl font-bold font-serif mb-6 text-white">
               Engrowthが実現したい世界
             </h1>
-            <p className="text-lg md:text-xl font-serif max-w-4xl mx-auto text-white">
-              学びたい情熱と才能が、経済的な理由や不合理な市場構造によって阻害されない未来を目指して
+            <p className="text-base md:text-xl font-serif max-w-4xl mx-auto text-white">
+              学びたい情熱と才能が
+            </p>
+            <p className="text-base md:text-xl font-serif max-w-4xl mx-auto text-white">
+              経済的な理由で失われない未来を目指して
             </p>
           </div>
         </div>
@@ -38,7 +41,7 @@ const VisionPage: React.FC = () => {
           
           {/* Section 1: 私たちが理想とする「教育の未来」 */}
           <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-gray font-serif mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-dark-gray font-serif mb-8">
               1. 私たちが理想とする「教育の未来」
             </h2>
             <div className="prose prose-lg max-w-none text-dark-gray font-serif leading-relaxed">
@@ -56,7 +59,7 @@ const VisionPage: React.FC = () => {
 
           {/* Section 2: 理想の実現に向けたEngrowthの「仕組み」と「想い」 */}
           <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-gray font-serif mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-dark-gray font-serif mb-8">
               2. 理想の実現に向けたEngrowthの「仕組み」と「想い」
             </h2>
             <div className="prose prose-lg max-w-none text-dark-gray font-serif leading-relaxed mb-8">
@@ -105,7 +108,7 @@ const VisionPage: React.FC = () => {
 
           {/* Section 3: 私たちが向き合う「2つの社会的損失」 */}
           <section id="section-3">
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-gray font-serif mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-dark-gray font-serif mb-8">
               3. 私たちが向き合う「2つの社会的損失」
             </h2>
             <div className="prose prose-lg max-w-none text-dark-gray font-serif leading-relaxed">
@@ -121,7 +124,7 @@ const VisionPage: React.FC = () => {
 
           {/* Section 4: 課題（１）：日本の英語学習市場が抱える「ガチャ問題」 */}
           <section>
-            <h2 className="text-3xl md:text-3xl font-bold text-dark-gray font-serif mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-dark-gray font-serif mb-8">
               日本の英語学習市場が抱える「ガチャ問題」
             </h2>
             <div className="prose prose-lg max-w-none text-dark-gray font-serif leading-relaxed">
@@ -142,7 +145,7 @@ const VisionPage: React.FC = () => {
 
           {/* Section 5: 課題（２）：優秀な留学生が直面する「経済的な壁」 */}
           <section>
-            <h2 className="text-3xl md:text-3xl font-bold text-dark-gray font-serif mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-dark-gray font-serif mb-8">
               優秀な留学生が直面する「経済的な壁」
             </h2>
             <div className="prose prose-lg max-w-none text-dark-gray font-serif leading-relaxed">
@@ -165,7 +168,7 @@ const VisionPage: React.FC = () => {
 
           {/* Section 6: Engrowthが目指す「知の循環エコシステム」 */}
           <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-gray font-serif mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-dark-gray font-serif mb-8">
               6. Engrowthが目指す「知の循環エコシステム」
             </h2>
             <div className="prose prose-lg max-w-none text-dark-gray font-serif leading-relaxed">
@@ -216,7 +219,7 @@ const VisionPage: React.FC = () => {
 
           {/* Section 7: なぜ「理想のエコシステム」は実現が難しいのか？ */}
           <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-gray font-serif mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-dark-gray font-serif mb-8">
               7. なぜ「理想のエコシステム」は実現が難しいのか？
             </h2>
             <div className="prose prose-lg max-w-none text-dark-gray font-serif leading-relaxed">
@@ -244,7 +247,7 @@ const VisionPage: React.FC = () => {
 
           {/* Section 8: Engrowthの「答え」：利益の目的を反転させる */}
           <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-gray font-serif mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-dark-gray font-serif mb-8">
               8.利益の目的を反転させる
             </h2>
             <div className="prose prose-lg max-w-none text-dark-gray font-serif leading-relaxed">
