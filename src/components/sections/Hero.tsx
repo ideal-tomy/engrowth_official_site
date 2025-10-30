@@ -1,4 +1,4 @@
-'use client';
+ 
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -67,6 +67,7 @@ export default function Hero({
             width={imageWidth}
             height={imageHeight}
             priority
+            fetchPriority="high"
             sizes="100vw"
             className="object-cover aspect-[2021/748] w-full h-full"
             style={{ objectPosition: bgPosition }}

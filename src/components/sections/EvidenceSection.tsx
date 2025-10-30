@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 
 type Props = {
@@ -20,7 +19,6 @@ export function EvidenceSection({ label, title, desc }: Props) {
             fill
             className="object-cover"
             sizes="(max-width:1024px) 100vw, 520px"
-            priority
           />
         </div>
 

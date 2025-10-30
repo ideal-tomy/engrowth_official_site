@@ -15,6 +15,7 @@ const VisionPage: React.FC = () => {
           alt="Engrowthが実現したい世界"
           fill
           priority
+          fetchPriority="high"
           sizes="100vw"
           className="object-cover aspect-[2021/748] w-full h-full"
           style={{ objectPosition: 'center 20%' }}

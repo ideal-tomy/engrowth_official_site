@@ -6,11 +6,12 @@ import Section from '@/components/layout/Section';
 import SectionHeaderLeft from '@/components/ui/SectionHeaderLeft';
 import FullBleed1440 from '@/components/layout/FullBleed1440';
 import Image from 'next/image';
-import { CourseCards } from '@/components/sections/CourseCards';
+import dynamic from 'next/dynamic';
 import { FaGraduationCap, FaLanguage, FaFlask } from 'react-icons/fa';
 import React from 'react';
 import { EvidenceSection } from '@/components/sections/EvidenceSection';
-import MethodCardsLayout from '@/components/sections/MethodCardsLayout';
+const MethodCardsLayout = dynamic(() => import('@/components/sections/MethodCardsLayout'));
+const CourseCards = dynamic(() => import('@/components/sections/CourseCards').then(m => m.CourseCards));
 import { IMAGE_PATHS } from '@/constants/images';
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
           alt=""
           fill
           priority
+          fetchPriority="high"
           sizes="100vw"
           className="object-cover aspect-[2021/748] w-full h-full"
           style={{ objectPosition: 'center 20%' }}
@@ -117,9 +119,8 @@ export default function Home() {
                   alt="コンサルタントは全員留学経験のある日本人"
                   width={48}
                   height={48}
-                  className="w-12 h-12 flex-shrink-0"
-                  priority
-                  unoptimized
+                className="w-12 h-12 flex-shrink-0"
+                sizes="48px"
                 />
                 <Typography variant="heading-sm" className="text-dark-gray font-serif">
                   コンサルタントは全員留学経験のある日本人
@@ -132,9 +133,8 @@ export default function Home() {
                   alt="科学的根拠に基づく学習プログラム"
                   width={48}
                   height={48}
-                  className="w-12 h-12 flex-shrink-0"
-                  priority
-                  unoptimized
+                className="w-12 h-12 flex-shrink-0"
+                sizes="48px"
                 />
                 <Typography variant="heading-sm" className="text-dark-gray font-serif">
                   科学的根拠に基づく学習プログラム
@@ -147,9 +147,8 @@ export default function Home() {
                   alt="1人ひとりに合わせたオーダーメイドの学習設計"
                   width={48}
                   height={48}
-                  className="w-12 h-12 flex-shrink-0"
-                  priority
-                  unoptimized
+                className="w-12 h-12 flex-shrink-0"
+                sizes="48px"
                 />
                 <Typography variant="heading-sm" className="text-dark-gray font-serif">
                   1人ひとりに合わせたオーダーメイドの学習設計

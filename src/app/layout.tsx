@@ -8,21 +8,21 @@ import './globals.css';
 
 const notoSerifJP = Noto_Serif_JP({
   subsets: ['latin'],
-  weight: ['200', '300', '400', '500', '600', '700', '900'],
+  weight: ['400', '700'],
   variable: '--font-serif',
   display: 'swap',
 });
 
 const notoSansJP = Noto_Sans_JP({
   subsets: ['latin'],
-  weight: ['100', '300', '400', '500', '700', '900'],
+  weight: ['400', '700'],
   variable: '--font-sans',
   display: 'swap',
 });
 
 const playfairDisplay = Playfair_Display({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'],
+  weight: ['700'],
   variable: '--font-display',
   display: 'swap',
 });
