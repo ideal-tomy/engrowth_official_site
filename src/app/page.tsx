@@ -69,10 +69,24 @@ export default function Home() {
               We're in business to transform our education.
             </Typography>
             <Typography variant="body-lg" className="text-gray leading-relaxed mb-6">
-              私たちはビジネスの力で教育の在り方を変えるために存在しています。
+            （善意（NPO）だけでは解決できない問題を、ビジネスの力で解決する。）
             </Typography>
-            <Typography variant="body-lg" className="text-gray leading-relaxed">
+            <Typography variant="body-lg" className="text-black leading-relaxed mb-6">
+            私たちはビジネスの力で教育の在り方を変えるために存在しています。
+            </Typography>
+            <Typography variant="body-lg" className="text-black leading-relaxed mb-6">
+            経済的な持続可能性がなければ、高い理想（教育支援）も続けられない。 
+            しかし、短期的、短絡的な利益追求に陥れば、教育の本質（個人の可能性）は見失われます。
+            </Typography>
+            <Typography variant="body-lg" className="text-black leading-relaxed mb-6">
               Engrowthが目指すのは、利益の最大化ではなく、学びの循環によって従来の教育の在り方を変え、一人ひとりの可能性を切り拓くこと、ひいては英語話者が増えることによって日本の国力を上げることです。
+            </Typography>
+            <Typography variant="body-lg" className="text-black leading-relaxed">
+            そして、この学びの循環（エコシステム）は、私たちの理想を実現すると同時に、
+            私たちが提供する「サービスの品質」そのものに直結しています。
+            コンサルタント（優秀な留学生）へ最大限の報酬を還元するという仕組みは、
+            従来の英語サービスでは実現が難しかった「圧倒的に質の高い人材」を確保し、
+            その人材をさらに有能な人材に成長させることに寄与する仕組みとなっているからです。
             </Typography>
           </div>
         </Container>
