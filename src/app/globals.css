@@ -216,74 +216,22 @@ body {
 /* Hero Background Image Unified Styles */
 /* 背景専用の安全な土台 */
 .hero-bg-unified {
-  position: relative;     /* fill の親は relative 必須 */
-  isolation: isolate;     /* z-index の衝突を防ぐ */
-  overflow: clip;         /* はみ出し抑止 */
 }
 
 /* ヒーローの高さは画像ではなくレイアウトで確保 */
 .hero-minh {
-  min-height: clamp(420px, 60vh, 760px); /* 端末ごとに安定 */
 }
 
 /* 背景画像を"敷く"だけの役割に限定 */
 .hero-bg-image {
-  object-fit: cover;
-  object-position: center;
-  opacity: 0.1;
-  z-index: -1;           /* コンテンツの背面へ */
-  pointer-events: none;  /* 背景への誤クリック防止 */
 }
 
-/* Responsive Spacing Utilities */
-.section-spacing {
-  /* セクション間余白: Mobile 32-48px → PC 64-96px */
-  padding-top: clamp(2rem, 4vw, 6rem); /* 32px → 96px */
-  padding-bottom: clamp(2rem, 4vw, 6rem); /* 32px → 96px */
-}
+/* Responsive Spacing Utilities (unused rules removed) */
+.section-spacing {}
+.section-spacing-sm {}
+.hero-spacing {}
 
-.section-spacing-sm {
-  /* 小セクション余白: Mobile 24-32px → PC 48-64px */
-  padding-top: clamp(1.5rem, 3vw, 4rem); /* 24px → 64px */
-  padding-bottom: clamp(1.5rem, 3vw, 4rem); /* 24px → 64px */
-}
-
-/* Tailwindの余白調整クラスが確実に適用されるように詳細度を上げる */
-.section-spacing.pt-0,
-.section-spacing-sm.pt-0 {
-  padding-top: 0 !important;
-}
-
-.section-spacing.pb-0,
-.section-spacing-sm.pb-0 {
-  padding-bottom: 0 !important;
-}
-
-.hero-spacing {
-  /* ヒーローセクション余白: Mobile 48-64px → PC 80-96px */
-  padding-top: clamp(3rem, 5vw, 6rem); /* 48px → 96px */
-  padding-bottom: clamp(3rem, 5vw, 6rem); /* 48px → 96px */
-}
-
-/* Horizontal Scroll Cards for Mobile */
-.cards-scroll-container {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 1rem;
-  padding: 0 1rem;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE/Edge */
-}
-
-.cards-scroll-container::-webkit-scrollbar {
-  display: none; /* Chrome/Safari */
-}
-
-.cards-scroll-item {
-  flex: 0 0 280px; /* 固定幅280px */
-  scroll-snap-align: center;
-}
+/* Horizontal Scroll (unused rules removed) */
 
 /* Mobile: 横スクロール、PC: グリッド表示 */
 @media (max-width: 1023px) {
@@ -357,51 +305,7 @@ body {
   margin-bottom: 1.5rem; /* 24px */
 }
 
-/* Animation Utilities */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.animate-fadeInUp {
-  animation: fadeInUp 0.6s ease-out;
-}
-
-.animate-scaleIn {
-  animation: scaleIn 0.4s ease-out;
-}
-
-.animate-slideInLeft {
-  animation: slideInLeft 0.5s ease-out;
-}
+/* Animation (unused rules removed) */
 
 /* Focus States for Accessibility */
 .focus-visible {
@@ -410,23 +314,7 @@ body {
   border-radius: 0.25rem;
 }
 
-/* Section Title with Underbar */
-.section-title-with-underbar {
-  position: relative;
-  display: inline-block;
-}
-
-.section-title-with-underbar::after {
-  content: '';
-  position: absolute;
-  bottom: -0.75rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 4rem;
-  height: 0.25rem;
-  background: var(--brand-red);
-  border-radius: 0.125rem;
-}
+/* Section Title with Underbar (unused rules removed) */
 
 /* スクロールバー非表示 */
 ::-webkit-scrollbar {
